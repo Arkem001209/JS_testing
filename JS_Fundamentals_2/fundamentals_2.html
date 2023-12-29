@@ -4,15 +4,24 @@
   <title>Page Title</title>
 </head>
 <body>
-  <script>
-    const string = "The revolution will not be televised.";
-    const badString = string;
-    console.log(badString);
+    <button>Press Me </button>
+    <div id="greeting"></div>
+    <script>
+        const string = "The revolution will not be televised.";
+        const badString = string;
+        console.log(badString);
 
-    const name = "Chris";
-    const greeting = `Hello, ${name}`;
-    console.log(greeting); // Cons literalls
+        const name = "Chris";
+        const greeting = `Hello, ${name}`;
+        console.log(greeting); // Cons literalls
+        const button = document.querySelector("button")
 
-  </script>
+        function greet() {
+            const name = prompt("What is your name?");
+            const greeting = document.querySelector("#greeting");
+            greeting.textContent = `Hello ${name}, nice to meet you!`;
+        }
+        button.addEventListener("click", greet);
+    </script>
 </body>
 </html>
